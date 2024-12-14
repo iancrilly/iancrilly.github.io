@@ -1,45 +1,61 @@
-<div id="quiz">
-  <!-- Question 1 -->
-  <div class="question" id="question1">
-    <h2>Does your panel have a 200A main breaker?</h2>
-    <p>
-      This is the largest breaker in your panel, both in size and on the number printed on it. 
-      Usually, it will say 100A, 125A, 150A, or 200A. 
-      <strong>The print on this breaker MUST be "200A" to continue.</strong>
-    </p>
-    <p>
-      In the example below, there are two styles of main breakers outlined in yellow. 
-      Notice how both are much larger than the rest. They also may have a sticker next to them labeled 
-      "Service Disconnect," shown in our example outlined in purple.
-    </p>
-    <img src="https://i.postimg.cc/MpK1k2qf/Panel-Example.png" alt="200A Main Breaker Example">
-    <button onclick="nextQuestion(2)">Yes</button>
-    <button onclick="endQuiz(false)">No</button>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Quiz</title>
+  <!-- Link to External CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="quiz">
+    <!-- Your HTML content goes here -->
+    <!-- Question 1 -->
+    <div class="question" id="question1">
+      <h2>Does your panel have a 200A main breaker?</h2>
+      <p>
+        This is the largest breaker in your panel, both in size and on the number printed on it. 
+        Usually, it will say 100A, 125A, 150A, or 200A. 
+        <strong>The print on this breaker MUST be "200A" to continue.</strong>
+      </p>
+      <p>
+        In the example below, there are two styles of main breakers outlined in yellow. 
+        Notice how both are much larger than the rest. They also may have a sticker next to them labeled 
+        "Service Disconnect," shown in our example outlined in purple.
+      </p>
+      <img src="https://i.postimg.cc/MpK1k2qf/Panel-Example.png" alt="200A Main Breaker Example">
+      <button onclick="nextQuestion(2)">Yes</button>
+      <button onclick="endQuiz(false)">No</button>
+    </div>
+
+    <!-- Question 2 -->
+    <div class="question hidden" id="question2">
+      <h2>Would your charger be mounted within 5' or 25' of your panel?</h2>
+      <p>
+        In the example below, the panel is outlined in yellow. 
+        This is the same panel that your 200A main breaker is on in the previous step!
+      </p>
+      <p>
+        Our measurements are all done along the wall. 
+        So everything in the <strong>red zone</strong> in our example is within 5' of the panel. 
+        Everything in the <strong>green zone</strong> is within 25' of the panel.
+      </p>
+      <p>
+        If you're unsure, just select "I'm Not Sure" and fill out our intake form. 
+        Make sure to attach some photos of your panel and where you want your charger so we can get a quote to you!
+      </p>
+      <img src="https://i.postimg.cc/ZnxvgjQL/Panel-Length.png" alt="Panel Distance Example">
+      <button onclick="redirectTo('https://clienthub.getjobber.com/booking/5faae588-29d8-4ee9-8407-58e1205079f6')">Within 5' (Red Zone)</button>
+      <button onclick="redirectTo('https://clienthub.getjobber.com/booking/5faae588-29d8-4ee9-8407-58e1205079f6')">Within 25' (Green Zone)</button>
+      <button onclick="endQuiz(true)">I'm Not Sure</button>
+      <button onclick="redirectTo('https://rchrenewables.com/pages/get-a-free-quote')">My Charger is Longer</button>
+    </div>
+
+    <!-- Result Screen -->
+    <div id="result" class="hidden"></div>
   </div>
 
-  <!-- Question 2 -->
-  <div class="question hidden" id="question2">
-    <h2>Would your charger be mounted within 5' or 25' of your panel?</h2>
-    <p>
-      In the example below, the panel is outlined in yellow. 
-      This is the same panel that your 200A main breaker is on in the previous step!
-    </p>
-    <p>
-      Our measurements are all done along the wall. 
-      So everything in the <strong>red zone</strong> in our example is within 5' of the panel. 
-      Everything in the <strong>green zone</strong> is within 25' of the panel.
-    </p>
-    <p>
-      If you're unsure, just select "I'm Not Sure" and fill out our intake form. 
-      Make sure to attach some photos of your panel and where you want your charger so we can get a quote to you!
-    </p>
-    <img src="https://i.postimg.cc/ZnxvgjQL/Panel-Length.png" alt="Panel Distance Example">
-    <button onclick="redirectTo('https://clienthub.getjobber.com/booking/5faae588-29d8-4ee9-8407-58e1205079f6')">Within 5' (Red Zone)</button>
-    <button onclick="redirectTo('https://clienthub.getjobber.com/booking/5faae588-29d8-4ee9-8407-58e1205079f6')">Within 25' (Green Zone)</button>
-    <button onclick="endQuiz(true)">I'm Not Sure</button>
-    <button onclick="redirectTo('https://rchrenewables.com/pages/get-a-free-quote')">My Charger is Longer</button>
-  </div>
-
-  <!-- Result Screen -->
-  <div id="result" class="hidden"></div>
-</div>
+  <!-- Link to External JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
