@@ -30,5 +30,17 @@ function endQuiz(unsure) {
 }
 
 function redirectTo(url) {
-  window.location.href = url;
+  // Create and display a pop-up
+  const popup = document.createElement('div');
+  popup.id = 'popup';
+  popup.innerHTML = `
+    <h2>You should qualify!</h2>
+    <p>Taking you to our booking page now...</p>
+  `;
+  document.body.appendChild(popup);
+
+  // Automatically redirect after 2.5 seconds
+  setTimeout(() => {
+    window.location.href = url;
+  }, 2500);
 }
