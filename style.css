@@ -1,0 +1,64 @@
+:root {
+  --gsc-text-color: rgb(20, 20, 22);
+  --gsc-background-color: rgb(255, 255, 255);
+  --gsc-foreground-color: rgb(245, 245, 245);
+  --gsc-border-color: rgb(231, 231, 231);
+  --gsc-button-background-color: rgb(222, 56, 19);
+  --gsc-button-text-color: rgb(255, 253, 222);
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: var(--gsc-foreground-color);
+  color: var(--gsc-text-color);
+  margin: 0;
+  padding: 0;
+}
+
+#quiz {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background: var(--gsc-background-color);
+  border: 1px solid var(--gsc-border-color);
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.question {
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+button {
+  background: var(--gsc-button-background-color);
+  color: var(--gsc-button-text-color);
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  margin: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #c94412;
+}
+
+.hidden {
+  display: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin: 10px 0;
+  border: 1px solid var(--gsc-border-color);
+}
